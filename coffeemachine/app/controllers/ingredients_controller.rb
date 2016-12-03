@@ -1,4 +1,5 @@
 class IngredientsController < ApplicationController
+  skip_before_action :require_admin, only: [:show]
   before_action :set_ingredient, only: [:show, :edit, :update, :destroy]
 
   # GET /ingredients
