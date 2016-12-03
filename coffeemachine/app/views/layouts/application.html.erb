@@ -30,17 +30,23 @@
   </p>
 </div>
 
+<div class="container">
+  <div class="row">
+    <h3>
+      <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+    </h3>
+  </div>
+</div>
 
 <div class="container">
   <div class="row">
-
     <%= yield %>
   </div>
 </div>
 
-<% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash_#{name}" %>
-<% end %>
+
 
 
 </body>
