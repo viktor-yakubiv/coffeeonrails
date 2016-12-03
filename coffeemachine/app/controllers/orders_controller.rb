@@ -28,14 +28,23 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.user = current_user
     @order.order_sum = @order.drink.price
+    if drink.amount_left < 1
+      redirect_to root_path, notice: 'We\'re out of this drink.'
+    end
     @order.ingredients.each do |ingredient|
       @order.order_sum += ingredient.price
+      if ingredient.amount_left < 1
+        redirect_to root_path, notice: 'We\'re out of this ingredient.'
+      end
+    end
+    if user.money_left < @order.order_sum
+      redirect_to root_path, notice: 'You do not have sufficient funds in your account'
     end
 
     respond_to do |format|
       if @order.save
         @order.user.order(@order.order_sum)
-        @order.drink.order()
+        @order.drink.order
         @order.ingredients.each do |ingredient|
           ingredient.order
         end
