@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :require_login
 
   helper_method :current_user
+  helper_method :is_admin?
   private
 
   def current_user

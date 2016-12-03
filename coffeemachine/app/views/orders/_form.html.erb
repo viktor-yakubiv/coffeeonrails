@@ -2,9 +2,8 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <!--<%= f.association :user %>-->
-    <%= f.association :drink %>
-    <%= f.association :ingredients %>
+    <%= f.association :drink, include_blank: false %>
+    <%= f.association :ingredients, as: :check_boxes %>
   </div>
 
   <div class="form-actions">

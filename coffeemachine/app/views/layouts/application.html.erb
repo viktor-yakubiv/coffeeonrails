@@ -10,15 +10,24 @@
 
 <body>
 
-<div id="user_nav">
-  <% if current_user %>
-      Logged in as <%= current_user.name %>.
-      <%= link_to 'Log out', log_out_path %>
-  <% else %>
-      <%= link_to 'Sign up', sign_up_path %> or
-      <%= link_to 'log in', log_in_path %>
-  <% end %>
+<div id="user_nav" class="container">
+  <p>
+    <% if current_user %>
+        Logged in as <%= current_user.name %>.
+        <%= link_to 'Log out', log_out_path %>
+    <% else %>
+        <%= link_to 'Sign up', sign_up_path %> or
+        <%= link_to 'log in', log_in_path %>
+    <% end %>
+  </p>
+  <p>
+    <%= link_to 'Drinks', drinks_path %>
+    <%= link_to 'Ingredients', ingredients_path %>
+    <%= link_to 'Users', users_path %>
+    <%= link_to 'Order', new_order_path %>
+  </p>
 </div>
+
 
 <div class="container">
   <div class="row">

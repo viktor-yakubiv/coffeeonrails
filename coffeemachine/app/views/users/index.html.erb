@@ -2,27 +2,38 @@
 
 <h1>Users</h1>
 
-<table>
+<table class="table">
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Password</th>
-      <th>Money left</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Money left</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @users.each do |user| %>
+  <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
         <td><%= user.password %></td>
         <td><%= user.money_left %></td>
+        <td>
+          <%= simple_form_for(user) do |f| %>
+
+              <div class="form-inputs">
+                <%= f.input :money_left %>
+              </div>
+
+              <div class="form-actions">
+                <%= f.button :submit %>
+              </div>
+          <% end %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 

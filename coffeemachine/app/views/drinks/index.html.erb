@@ -2,7 +2,7 @@
 
 <h1>Drinks</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,6 +18,18 @@
         <td><%= drink.name %></td>
         <td><%= drink.amount_left %></td>
         <td><%= drink.price %></td>
+        <td>
+          <%= simple_form_for(drink) do |f| %>
+
+              <div class="form-inputs">
+                <%= f.input :amount_left %>
+              </div>
+
+              <div class="form-actions">
+                <%= f.button :submit %>
+              </div>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', drink %></td>
         <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
         <td><%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
