@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Ingredients</h1>
+<h1><%= t('nav.ingredients') %></h1>
 
 <table class="table">
   <thead>
   <tr>
-    <th>Name</th>
-    <th>Amount left</th>
-    <th>Price</th>
+    <th><%= t('table.name') %></th>
+    <th><%= t('table.amount_left') %></th>
+    <th><%= t('table.price') %></th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -26,12 +26,12 @@
               </div>
 
               <div class="form-actions">
-                <%= f.button :submit %>
+                <%= f.button :submit, t('edit.submit') %>
               </div>
           <% end %></td>
-        <td><%= link_to 'Show', ingredient %></td>
-        <td><%= link_to 'Edit', edit_ingredient_path(ingredient) %></td>
-        <td><%= link_to 'Destroy', ingredient, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= link_to t('edit.show'), ingredient %></td>
+        <td><%= link_to t('edit.edit'), edit_ingredient_path(ingredient) %></td>
+        <td><%= link_to t('edit.destroy'), ingredient, method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
   <% end %>
   </tbody>
@@ -39,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Ingredient', new_ingredient_path %>
+<%= link_to t('edit.create'), new_ingredient_path %>

@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  get 'log_out' => 'sessions#destroy', :as => 'log_out'
-  get 'log_in' => 'sessions#new', :as => 'log_in'
-  get 'sign_up' => 'users#new', :as => 'sign_up'
-  root 'orders#new'
+  scope ":locale" do
+    get 'log_out' => 'sessions#destroy', :as => 'log_out'
+    get 'log_in' => 'sessions#new', :as => 'log_in'
+    get 'sign_up' => 'users#new', :as => 'sign_up'
+    root 'orders#new'
 
-  resources :orders
-  resources :users
-  resources :ingredients
-  resources :drinks
-  resources :sessions
+    resources :orders
+    resources :users
+    resources :ingredients
+    resources :drinks
+    resources :sessions
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  end
 end

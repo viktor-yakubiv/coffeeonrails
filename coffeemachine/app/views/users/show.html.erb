@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('table.user_name')%>:</strong>
   <%= @user.name %>
 </p>
 
 <p>
-  <strong>Password:</strong>
+  <strong><%= t('table.password')%>:</strong>
   <%= @user.password %>
 </p>
 
 <p>
-  <strong>Money left:</strong>
+  <strong><%= t('table.money_left')%>:</strong>
   <%= @user.money_left %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to t('edit.edit'), edit_user_path(@user) %> |
+<%= link_to t('edit.back'), users_path %>

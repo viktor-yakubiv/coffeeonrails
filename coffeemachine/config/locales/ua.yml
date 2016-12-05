@@ -1,0 +1,134 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ua:
+  hello: "Привіт світе"
+  nav:
+    logged_in_as: "Ви увійшли як"
+    log_out: 'Вийти'
+    sign_up: 'Зареєструватись'
+    log_in: 'Увійти'
+    home: 'Домашня'
+    drinks: 'Напої'
+    ingredients: 'Додатки'
+    users: 'Користувачі'
+  edit:
+    show: 'Показати'
+    back: 'Назад'
+    edit: 'Редагувати'
+    destroy: 'Знищити'
+    create: 'Створити'
+    submit: 'Підтвердити'
+  table:
+    name: 'Назва'
+    amount_left: 'Залишок'
+    price: 'Ціна'
+    user_name: "Ім'я"
+    password: 'Пароль'
+    money_left: 'Залишок'
+  activerecord:
+    models:
+      user: 'Користувач'
+      order: 'Замовлення'
+      drink: 'Напій'
+      ingredient: 'Додаток'
+    attributes:
+      drink:
+        name: 'Назва'
+        amount_left: 'Залишок'
+        price: 'Ціна'
+      ingredient:
+        name: 'Назва'
+        amount_left: 'Залишок'
+        price: 'Ціна'
+      user:
+        name: "Ім'я"
+        password: 'Пароль'
+        money_left: 'Залишок'
+      order:
+        order_sum: 'Сума'
+  simple_form:
+      "yes": 'Так'
+      "no": 'Ні'
+      required:
+        text: "обов'язково"
+        mark: '*'
+        # You can uncomment the line below if you need to overwrite the whole required html.
+        # When using html, text and mark won't be used.
+        # html: '<abbr title="required">*</abbr>'
+      error_notification:
+        default_message: "Будь ласка, перевірте поля нижче:"
+      labels:
+        drink:
+          name: 'Назва'
+          amount_left: 'Залишок'
+          price: 'Ціна'
+        ingredient:
+          name: 'Назва'
+          amount_left: 'Залишок'
+          price: 'Ціна'
+        user:
+          name: "Ім'я"
+          password: 'Пароль'
+          money_left: 'Залишок'
+        order:
+          order_sum: 'Сума'
+          drink: 'Напій'
+          ingredients: 'Додатки'
+
+      # Examples
+      # labels:
+      #   defaults:
+      #     password: 'Password'
+      #   user:
+      #     new:
+      #       email: 'E-mail to sign in.'
+      #     edit:
+      #       email: 'E-mail.'
+      # hints:
+      #   defaults:
+      #     username: 'User name to sign in.'
+      #     password: 'No special characters, please.'
+      # include_blanks:
+      #   defaults:
+      #     age: 'Rather not say'
+      # prompts:
+      #   defaults:
+      #     age: 'Select your age'
+  breadcrumbs:
+    application:
+      root: "Домашня"
+    pages:
+      pages: "Сторінки"
+  helpers:
+    actions: "Дії"
+    links:
+      back: "Back"
+      cancel: "Cancel"
+      confirm: "Are you sure?"
+      destroy: "Delete"
+      new: "New"
+      edit: "Edit"
+    titles:
+      edit: "Редагувати %{model}"
+      save: "Зберегти %{model}"
+      new: "Створити %{model}"
+      delete: "Видалити %{model}"

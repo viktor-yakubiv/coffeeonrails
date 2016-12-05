@@ -1,5 +1,4 @@
-<h1>New Order</h1>
+<h1><%= t('edit.create') %> <%= t('activerecord.models.order') %></h1>
 
 <%= render 'form', order: @order %>
 
-<%= link_to 'New Order', new_order_path %>

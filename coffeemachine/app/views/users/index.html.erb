@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1><%= t('nav.users') %></h1>
 
 <table class="table">
   <thead>
   <tr>
-    <th>Name</th>
-    <th>Password</th>
-    <th>Money left</th>
+    <th><%= t('table.user_name') %></th>
+    <th><%= t('table.password') %></th>
+    <th><%= t('table.money_left') %></th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -26,12 +26,12 @@
               </div>
 
               <div class="form-actions">
-                <%= f.button :submit %>
+                <%= f.button :submit, t('edit.submit') %>
               </div>
           <% end %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= link_to t('edit.show'), user %></td>
+        <td><%= link_to t('edit.edit'), edit_user_path(user) %></td>
+        <td><%= link_to t('edit.destroy'), user, method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
   <% end %>
   </tbody>
@@ -39,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to t('edit.create'), new_user_path %>

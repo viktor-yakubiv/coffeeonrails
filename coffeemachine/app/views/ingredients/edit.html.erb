@@ -1,6 +1,6 @@
-<h1>Editing Ingredient</h1>
+<h1><%= t('edit.edit') %></h1>
 
 <%= render 'form', ingredient: @ingredient %>
 
-<%= link_to 'Show', @ingredient %> |
-<%= link_to 'Back', ingredients_path %>
+<%= link_to t('edit.show'), @ingredient %> |
+<%= link_to t('edit.back'), ingredients_path %>

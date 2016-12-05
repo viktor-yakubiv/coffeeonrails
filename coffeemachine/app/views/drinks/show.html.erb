@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('table.name') %>:</strong>
   <%= @drink.name %>
 </p>
 
 <p>
-  <strong>Amount left:</strong>
+  <strong><%= t('table.amount_left') %>:</strong>
   <%= @drink.amount_left %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong><%= t('table.price') %>:</strong>
   <%= @drink.price %>
 </p>
 
-<%= link_to 'Edit', edit_drink_path(@drink) %> |
-<%= link_to 'Back', drinks_path %>
+<%= link_to t('edit.edit'), edit_drink_path(@drink) %> |
+<%= link_to t('edit.back'), drinks_path %>

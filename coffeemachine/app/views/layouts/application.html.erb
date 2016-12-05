@@ -11,23 +11,31 @@
 <body>
 
 <div id="user_nav" class="container">
-  <p>
-    <% if current_user %>
-        Logged in as <%= current_user.name %>.
-        <%= link_to 'Log out', log_out_path %>
-    <% else %>
-        <%= link_to 'Sign up', sign_up_path %> or
-        <%= link_to 'log in', log_in_path %>
-    <% end %>
-  </p>
-  <p>
-    <button class="btn"><%= link_to 'Home', root_path %></button>
-    <% if is_admin? %>
-        <button class="btn"><%= link_to 'Drinks', drinks_path %></button>
-        <button class="btn"><%= link_to 'Ingredients', ingredients_path %></button>
-        <button class="btn"><%= link_to 'Users', users_path %></button>
-    <% end %>
-  </p>
+  <div class="row">
+    <div class="pull-right">
+      <%= link_to_unless_current "English", locale: 'en', class: "btn btn-info" %>
+      <%= link_to_unless_current "Українська", locale: 'ua', class: "btn btn-info" %>
+    </div>
+    <p>
+      <% if current_user %>
+          <%= t('nav.logged_in_as') %> <%= current_user.name %>.
+          <%= link_to t('nav.log_out'), log_out_path %>
+      <% else %>
+          <%= link_to t('nav.sign_up'), sign_up_path %> or
+          <%= link_to t('nav.log_in'), log_in_path %>
+      <% end %>
+    </p>
+  </div>
+  <div class="row">
+    <p>
+      <%= link_to t('nav.home'), root_path, class: "btn btn-default" %>
+      <% if is_admin? %>
+          <%= link_to t('nav.drinks'), drinks_path, class: "btn btn-default" %>
+          <%= link_to t('nav.ingredients'), ingredients_path, class: "btn btn-default" %>
+          <%= link_to t('nav.users'), users_path, class: "btn btn-default" %>
+      <% end %>
+    </p>
+  </div>
 </div>
 
 <div class="container">
@@ -45,8 +53,6 @@
     <%= yield %>
   </div>
 </div>
-
-
 
 
 </body>

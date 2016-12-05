@@ -20,4 +20,48 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello world1"
+  nav:
+    logged_in_as: "Logged in as1"
+    log_out: 'Log out1'
+    sign_up: 'Sign up1'
+    log_in: 'Log in1'
+    home: 'Home1'
+    drinks: 'Drinks1'
+    ingredients: 'Ingredients1'
+    users: 'Users1'
+  edit:
+    show: 'Show1'
+    back: 'Back1'
+    edit: 'Edit1'
+    destroy: 'Destroy1'
+    create: 'Create1'
+    submit: 'Submit1'
+  table:
+    name: 'Name1'
+    amount_left: 'Amount left1'
+    price: 'Price1'
+    user_name: 'Name1'
+    password: 'Password1'
+    money_left: 'Money left1'
+  activerecord:
+    models:
+      user: 'User1'
+      order: 'Order1'
+      drink: 'Drink1'
+      ingredient: 'Ingredient1'
+    attributes:
+      drink:
+        name: 'Name1'
+        amount_left: 'Amount left1'
+        price: 'Price1'
+      ingredient:
+        name: 'Name1'
+        amount_left: 'Amount left1'
+        price: 'Price1'
+      user:
+        name: 'Name1'
+        password: 'Password1'
+        money_left: 'Money left1'
+      order:
+        order_sum: 'Order sum1'

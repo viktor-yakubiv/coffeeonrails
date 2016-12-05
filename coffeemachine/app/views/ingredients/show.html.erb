@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('table.name') %>:</strong>
   <%= @ingredient.name %>
 </p>
 
 <p>
-  <strong>Amount left:</strong>
+  <strong><%= t('table.amount_left') %>:</strong>
   <%= @ingredient.amount_left %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong><%= t('table.price') %>:</strong>
   <%= @ingredient.price %>
 </p>
 
-<%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
-<%= link_to 'Back', ingredients_path %>
+<%= link_to t('edit.edit'), edit_ingredient_path(@ingredient) %> |
+<%= link_to t('edit.back'), ingredients_path %>
