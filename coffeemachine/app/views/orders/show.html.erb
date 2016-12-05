@@ -1,26 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Order sum:</strong>
+  <strong><%= t('table.order_sum') %>:</strong>
   <%= @order.order_sum %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong><%= t('table.user') %>:</strong>
   <%= @order.user.name %>
 </p>
 
 <p>
-  <strong>Drink:</strong>
+  <strong><%= t('table.drink') %>:</strong>
   <%= @order.drink.name %>
 </p>
 
-<p>Ingredients:</p>
+<p><strong><%= t('table.ingredients') %>:</strong></p>
 <ul>
 <% @order.ingredients.each do |ingredient| %>
     <li><%= ingredient.name %></li>
 <% end %>
 </ul>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'New Order', new_order_path %>
+<%= link_to t('edit.create'), new_order_path %>

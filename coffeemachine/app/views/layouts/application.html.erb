@@ -27,14 +27,13 @@
     </p>
   </div>
   <div class="row">
-    <p>
-      <%= link_to t('nav.home'), root_path, class: "btn btn-default" %>
-      <% if is_admin? %>
-          <%= link_to t('nav.drinks'), drinks_path, class: "btn btn-default" %>
-          <%= link_to t('nav.ingredients'), ingredients_path, class: "btn btn-default" %>
-          <%= link_to t('nav.users'), users_path, class: "btn btn-default" %>
-      <% end %>
-    </p>
+    <%= link_to t('nav.home'), root_path, class: "btn btn-default" %>
+    <% if is_admin? %>
+        <%= link_to t('nav.drinks'), drinks_path, class: "btn btn-default" %>
+        <%= link_to t('nav.ingredients'), ingredients_path, class: "btn btn-default" %>
+        <%= link_to t('nav.users'), users_path, class: "btn btn-default" %>
+    <% end %>
+
   </div>
 </div>
 

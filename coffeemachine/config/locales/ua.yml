@@ -44,6 +44,10 @@ ua:
     user_name: "Ім'я"
     password: 'Пароль'
     money_left: 'Залишок'
+    order_sum: 'Сума замовлення'
+    user: 'Користувач'
+    drink: 'Напій'
+    ingredients: 'Додатки'
   activerecord:
     models:
       user: 'Користувач'
