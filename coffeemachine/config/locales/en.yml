@@ -2,9 +2,9 @@
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
 #
-# To use the locales, use `I18n.t`:
+# To use the locales, use `I8n.t`:
 #
-#     I18n.t 'hello'
+#     I8n.t 'hello'
 #
 # In views, this is aliased to just `t`:
 #
@@ -12,7 +12,7 @@
 #
 # To use a different locale, set it with `I18n.locale`:
 #
-#     I18n.locale = :es
+#     I8n.locale = :es
 #
 # This would use the information in config/locales/es.yml.
 #
@@ -20,48 +20,58 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world1"
+  hello: "Hello world"
   nav:
-    logged_in_as: "Logged in as1"
-    log_out: 'Log out1'
-    sign_up: 'Sign up1'
-    log_in: 'Log in1'
-    home: 'Home1'
-    drinks: 'Drinks1'
-    ingredients: 'Ingredients1'
-    users: 'Users1'
+    logged_in_as: "Logged in as"
+    log_out: 'Log out'
+    sign_up: 'Sign up'
+    log_in: 'Log in'
+    home: 'Home'
+    drinks: 'Drinks'
+    ingredients: 'Ingredients'
+    users: 'Users'
   edit:
-    show: 'Show1'
-    back: 'Back1'
-    edit: 'Edit1'
-    destroy: 'Destroy1'
-    create: 'Create1'
-    submit: 'Submit1'
+    show: 'Show'
+    back: 'Back'
+    edit: 'Edit'
+    destroy: 'Destroy'
+    create: 'Create'
+    submit: 'Submit'
   table:
-    name: 'Name1'
-    amount_left: 'Amount left1'
-    price: 'Price1'
-    user_name: 'Name1'
-    password: 'Password1'
-    money_left: 'Money left1'
+    name: 'Name'
+    amount_left: 'Amount left'
+    price: 'Price'
+    user_name: 'Name'
+    password: 'Password'
+    money_left: 'Money left'
   activerecord:
     models:
-      user: 'User1'
-      order: 'Order1'
-      drink: 'Drink1'
-      ingredient: 'Ingredient1'
+      user: 'User'
+      order: 'Order'
+      drink: 'Drink'
+      ingredient: 'Ingredient'
     attributes:
       drink:
-        name: 'Name1'
-        amount_left: 'Amount left1'
-        price: 'Price1'
+        name: 'Name'
+        amount_left: 'Amount left'
+        price: 'Price'
       ingredient:
-        name: 'Name1'
-        amount_left: 'Amount left1'
-        price: 'Price1'
+        name: 'Name'
+        amount_left: 'Amount left'
+        price: 'Price'
       user:
-        name: 'Name1'
-        password: 'Password1'
-        money_left: 'Money left1'
+        name: 'Name'
+        password: 'Password'
+        money_left: 'Money left'
       order:
-        order_sum: 'Order sum1'
+        order_sum: 'Order sum'
+  notice:
+      on_create: "created"
+      on_destroy: "destroyed"
+      on_update: "updated"
+      no_sufficient_funds: "You don't have sufficient funds"
+      out_of_ingredient: "Sorry, we're out of this ingredient"
+      out_of_drink: "Sorry, we're out of this drink"
+      logged_in: "Logged in"
+      logged_out: "Logged out"
+      wrong_credentials: "Wrong name and/or password  "

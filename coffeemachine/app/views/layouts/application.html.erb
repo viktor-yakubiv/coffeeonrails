@@ -13,15 +13,15 @@
 <div id="user_nav" class="container">
   <div class="row">
     <div class="pull-right">
-      <%= link_to_unless_current "English", locale: 'en', class: "btn btn-info" %>
-      <%= link_to_unless_current "Українська", locale: 'ua', class: "btn btn-info" %>
+      <p class="btn btn-info"><%= link_to_unless_current "English", locale: 'en' %></p>
+      <p class="btn btn-info"><%= link_to_unless_current "Українська", locale: 'ua'%></p>
     </div>
     <p>
       <% if current_user %>
           <%= t('nav.logged_in_as') %> <%= current_user.name %>.
           <%= link_to t('nav.log_out'), log_out_path %>
       <% else %>
-          <%= link_to t('nav.sign_up'), sign_up_path %> or
+          <%= link_to t('nav.sign_up'), sign_up_path %> |
           <%= link_to t('nav.log_in'), log_in_path %>
       <% end %>
     </p>

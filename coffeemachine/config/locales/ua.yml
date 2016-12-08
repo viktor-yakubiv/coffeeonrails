@@ -136,3 +136,14 @@ ua:
       save: "Зберегти %{model}"
       new: "Створити %{model}"
       delete: "Видалити %{model}"
+  notice:
+    on_create: "створено"
+    on_destroy: "знищено"
+    on_update: "оновлено"
+    no_sufficient_funds: "У вас недостатньо коштів на рахунку"
+    out_of_ingredient: "Вибачте, у нас закінчився цей додаток"
+    out_of_drink: "Вибачте, у нас закінчився цей напій"
+    logged_in: "Ви успішно увійшли"
+    logged_out: "Ви успішно вийшли"
+    wrong_credentials: "Введено неправильне ім'я і/чи пароль"
+
