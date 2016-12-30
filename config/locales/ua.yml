@@ -30,6 +30,8 @@ ua:
     drinks: 'Напої'
     ingredients: 'Додатки'
     users: 'Користувачі'
+    admin: 'Адміністрування'
+    lang: 'Мова'
   edit:
     show: 'Показати'
     back: 'Назад'
@@ -37,10 +39,12 @@ ua:
     destroy: 'Знищити'
     create: 'Створити'
     submit: 'Підтвердити'
+    update: 'Оновити'
   table:
     name: 'Назва'
     amount_left: 'Залишок'
     price: 'Ціна'
+    actions: 'Дії'
     user_name: "Ім'я"
     password: 'Пароль'
     money_left: 'Залишок'

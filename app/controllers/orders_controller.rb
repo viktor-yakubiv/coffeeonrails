@@ -1,12 +1,16 @@
 require 'my_logger'
 class OrdersController < ApplicationController
-  skip_before_action :require_admin, only: [:new, :create]
+  skip_before_action :require_admin, only: [:index, :show, :new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    if current_user.is_admin?
+      @orders = Order.all
+    else
+      @orders = Order.where(:user_id => session[:user_id]).all
+    end
   end
 
   # GET /orders/1

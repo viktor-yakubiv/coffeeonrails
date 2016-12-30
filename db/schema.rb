@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161203201741) do
+ActiveRecord::Schema.define(version: 20161203130705) do
 
   create_table "drinks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20161203201741) do
   create_table "ingredients_orders", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "order_id"
     t.integer "ingredient_id"
-    t.index ["ingredient_id"], name: "index_orders_ingredients_on_ingredient_id", using: :btree
-    t.index ["order_id"], name: "index_orders_ingredients_on_order_id", using: :btree
+    t.index ["ingredient_id"], name: "index_ingredients_orders_on_ingredient_id", using: :btree
+    t.index ["order_id"], name: "index_ingredients_orders_on_order_id", using: :btree
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 20161203201741) do
     t.float    "money_left", limit: 24
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
-    t.boolean  "is_admin"
   end
 
 end

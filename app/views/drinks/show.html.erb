@@ -15,5 +15,7 @@
   <%= @drink.price %>
 </p>
 
-<%= link_to t('edit.edit'), edit_drink_path(@drink) %> |
-<%= link_to t('edit.back'), drinks_path %>
+<div>
+  <%= link_to t('edit.edit'), edit_drink_path(@drink), class: 'btn btn-primary' %>
+  <%= link_to t('edit.back'), drinks_path, class: 'btn btn-link' %>
+</div>

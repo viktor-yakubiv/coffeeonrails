@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('nav.users') %></h1>
+<h1><%= t('nav.users') %> <%= link_to t('edit.create'), new_user_path, class: 'btn btn-primary' %></h1>
 
 <table class="table">
   <thead>
   <tr>
     <th><%= t('table.user_name') %></th>
-    <th><%= t('table.password') %></th>
     <th><%= t('table.money_left') %></th>
-    <th colspan="3"></th>
+    <th><%= t('table.actions') %></th>
   </tr>
   </thead>
 
@@ -16,7 +15,6 @@
   <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= user.password %></td>
         <td><%= user.money_left %></td>
         <td>
           <%= simple_form_for(user) do |f| %>
@@ -26,17 +24,13 @@
               </div>
 
               <div class="form-actions">
-                <%= f.button :submit, t('edit.submit') %>
+                <%= f.button :submit, t('edit.update'), class: 'btn btn-primary' %>
               </div>
           <% end %></td>
-        <td><%= link_to t('edit.show'), user %></td>
-        <td><%= link_to t('edit.edit'), edit_user_path(user) %></td>
-        <td><%= link_to t('edit.destroy'), user, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= link_to t('edit.show'), user, class: "btn btn-secondary" %>
+        <%= link_to t('edit.edit'), edit_user_path(user), class: "btn btn-secondary" %>
+        <%= link_to t('edit.destroy'), user, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %></td>
       </tr>
   <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to t('edit.create'), new_user_path %>

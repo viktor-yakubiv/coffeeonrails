@@ -30,6 +30,8 @@ en:
     drinks: 'Drinks'
     ingredients: 'Ingredients'
     users: 'Users'
+    admin: 'Administration'
+    lang: 'Language'
   edit:
     show: 'Show'
     back: 'Back'
@@ -37,10 +39,12 @@ en:
     destroy: 'Destroy'
     create: 'Create'
     submit: 'Submit'
+    update: 'Update'
   table:
     name: 'Name'
     amount_left: 'Amount left'
     price: 'Price'
+    actions: 'Actions'
     user_name: 'Name'
     password: 'Password'
     money_left: 'Money left'

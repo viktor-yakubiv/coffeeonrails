@@ -15,5 +15,5 @@
   <%= @user.money_left %>
 </p>
 
-<%= link_to t('edit.edit'), edit_user_path(@user) %> |
-<%= link_to t('edit.back'), users_path %>
+<%= link_to t('edit.edit'), edit_user_path(@user), class: 'btn btn-primary' %>
+<%= link_to t('edit.back'), users_path, class: 'btn btn-link' %>

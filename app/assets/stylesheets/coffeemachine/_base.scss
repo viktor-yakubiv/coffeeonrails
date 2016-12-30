@@ -1,0 +1,88 @@
+body {
+  //background-attachment: fixed;
+  //background-image: url(../images/brown-backgroung.jpg);
+  //background-position: center;
+  //background-size: cover;
+}
+
+
+// Typography
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-family-headings;
+  font-weight: 400;
+  //text-transform: lowercase;
+}
+
+
+// Layout
+
+.content-middle,
+.content-middle-inner {
+  height: 100%;
+}
+
+.content-middle {
+  display: table;
+  margin: auto;
+}
+
+.content-middle-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+// Header
+
+.header-navbar {
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+}
+
+.navbar-brand {
+  position: relative;
+  top: -$navbar-padding-y;
+  margin-top: -1px;
+  margin-bottom: -(2 * $navbar-padding-y + $spacer);
+  padding: $spacer / 2;
+  height: 2 * $navbar-padding-y + $spacer + 2.25rem;
+  background: #4e342e no-repeat center;
+  border: 1px solid $brand-primary;
+  border-radius: 0 0 $navbar-border-radius $navbar-border-radius;
+
+  img {
+    display: block;
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+// Brand images
+
+.brand-image img {
+  display: block;
+}
+
+.brand-image-large img {
+  max-height: 80vh;
+}
+
+
+// Hernya
+
+.form-actions {
+  margin-bottom: 1rem;
+}
+
+.form-chekboxes {
+  label {
+    display: block;
+
+    input {
+      display: inline-block;
+      margin-right: .5rem;
+    }
+  }
+}

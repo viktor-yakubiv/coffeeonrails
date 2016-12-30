@@ -15,5 +15,5 @@
   <%= @ingredient.price %>
 </p>
 
-<%= link_to t('edit.edit'), edit_ingredient_path(@ingredient) %> |
-<%= link_to t('edit.back'), ingredients_path %>
+<%= link_to t('edit.edit'), edit_ingredient_path(@ingredient), class: 'btn btn-primary' %>
+<%= link_to t('edit.back'), ingredients_path, class: 'btn btn-link' %>

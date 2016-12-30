@@ -2,5 +2,5 @@
 
 <%= render 'form', ingredient: @ingredient %>
 
-<%= link_to t('edit.show'), @ingredient %> |
-<%= link_to t('edit.back'), ingredients_path %>
+<%= link_to t('edit.show'), @ingredient, class: 'btn btn-secondary' %>
+<%= link_to t('edit.back'), ingredients_path, class: 'btn btn-link' %>

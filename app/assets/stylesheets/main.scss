@@ -1,0 +1,20 @@
+/*!
+ * Coffee bar styles
+ * Copyright 2016 Viktor Yakubiv
+ *
+ * Licensed under MIT
+ */
+
+
+// Bootstrap components
+@import "coffeemachine/custom";
+
+// Bootstrap
+@import "bootstrap";
+
+// Core
+@import "coffeemachine/base";
+
+// Components
+@import "coffeemachine/products";
+@import "coffeemachine/cart";

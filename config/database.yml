@@ -8,8 +8,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   database: coffeemachine
-  username: root
-  password: admin
+  username: admin
+  password: 12345678
   pool: 5
   socket: /tmp/mysql.sock
 
